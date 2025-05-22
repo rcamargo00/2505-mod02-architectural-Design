@@ -1,4 +1,4 @@
-### Detalles de la implementación 2: Rutas (Blog)
+### clase 5: Rutas (Blog)
 
 **Título:** Blog Personal - Configuración de Rutas y Navegación
 
