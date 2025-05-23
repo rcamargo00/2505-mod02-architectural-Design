@@ -31,27 +31,48 @@ Utilizaremos un “Espacio de Trabajo (Workspace)” de Angular con una aplicaci
 
 Proyecto "dimplomadov2"
 1. Landin Page
-
-2. Aplicación 1: “Gestor de Tareas”
+   
+![image](https://github.com/user-attachments/assets/45f13680-854a-422c-8523-b2d070d9d2c2)
+<br>
+3. Aplicación 1: “Gestor de Tareas”
 
 Una aplicación para gestionar tareas (To-Do List) con funcionalidades como agregar, editar, eliminar y marcar tareas como completadas.
+
 * Clase 1: Configuración del Proyecto y Primer Componente
 * Clase 2: Componentes y Comunicación (Input/Output)
 * Clase 3: Servicios para Manejo de Datos
 * Clase 4: Formularios y Validaciones
 * Clase 5: Rutas
 
+![image](https://github.com/user-attachments/assets/1761dd7f-28a7-449b-af76-e272446d50da)
+![image](https://github.com/user-attachments/assets/9bf9c1db-e60f-4fb9-9c7d-8a1a29c2a6eb)
+<br>
+
 3. Aplicación 2: “Catálogo de Productos” (ropa y calzados)
+
+Una aplicación para listar productos con funcionalidades de búsqueda, detalles de productos y carrito de compras 
+básico.
 
 * Clase 2: Componentes y Comunicación
 * Clase 3: Servicios y Almacenamiento Local
 * Clase 4: Formularios de Búsqueda y Filtrado
 * Clase 5: Rutas
 
+![image](https://github.com/user-attachments/assets/de284a5e-424e-45c9-8fb0-03f46c6f4123)
+![image](https://github.com/user-attachments/assets/4fd40477-6a44-4a59-8e8c-dc97adf21d82)
+<br>
+
 4. Aplicación 3: “Blog personal” (sobre ángular)
+
+Un blog para crear, editar y mostrar publicaciones, con comentarios básicos y funcionalidad de búsqueda.
 
 * Clase 4: Servicios para Manejo de Datos
 * Clase 5: Rutas
+
+![image](https://github.com/user-attachments/assets/27cbaf92-2a81-418c-aaba-b1569f1bca38)
+![image](https://github.com/user-attachments/assets/ef94554f-09a0-4ea9-8cb2-7b0c30aa8662)
+![image](https://github.com/user-attachments/assets/5a7aafc1-83a6-4a67-9c58-84de17ceb3de)
+<br>
 
 # Conclusiones
 
