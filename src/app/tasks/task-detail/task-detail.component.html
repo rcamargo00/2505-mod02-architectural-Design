@@ -1,0 +1,33 @@
+<div class="task-detail-container">
+  <mat-card *ngIf="task">
+    <mat-card-header>
+      <mat-card-title>Detalles de la Tarea: {{ task.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>ID:</strong> {{ task.id }}</p>
+      <p><strong>Título:</strong> {{ task.title }}</p>
+      <p><strong>Estado:</strong>
+        <mat-icon>{{ task.completed ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+        {{ task.completed ? 'Completada' : 'Pendiente' }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Volver a la lista
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card *ngIf="!task">
+    <mat-card-header>
+      <mat-card-title>Tarea No Encontrada</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Lo sentimos, la tarea que buscas no existe.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Volver a la lista
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

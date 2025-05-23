@@ -108,6 +108,5 @@ El AppComponent (app.component.html) debe contener ```<router-outlet></router-ou
     </script>
     ```
     
-    Si se prefiere una solución "más Angular", esta lógica podría moverse al archivo .ts del componente y vincularse a una propiedad en la plantilla.
-
+    
 Esta documentación cubre los aspectos clave de la implementación y configuración de la Landing Page para el proyecto "diplomadov2".

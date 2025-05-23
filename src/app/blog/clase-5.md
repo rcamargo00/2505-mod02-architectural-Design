@@ -1,4 +1,4 @@
-### clase 5: Rutas (Blog)
+### clase 2: Rutas (Blog)
 
 **Título:** Blog Personal - Configuración de Rutas y Navegación
 

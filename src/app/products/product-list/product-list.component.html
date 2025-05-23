@@ -1,0 +1,66 @@
+<div class="product-list-container">  
+  <mat-toolbar color="primary">
+    <span>Catálogo de Productos</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="cart-button" aria-label="Carrito de compras"
+            [matBadge]="cartItemCount" matBadgeColor="accent"
+            matBadgeOverlap="false" matBadgePosition="below after">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>  
+  <mat-card class="filter-card">
+    <mat-card-content>
+      <form [formGroup]="filterForm" class="filter-form">
+        <mat-form-field appearance="outline" class="filter-field">
+          <mat-label>Buscar Productos</mat-label>
+          <input matInput formControlName="searchTerm" placeholder="Nombre o descripción">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="filter-field">
+          <mat-label>Categoría</mat-label>
+          <mat-select formControlName="category">
+            <mat-option value="all">Todas</mat-option>
+            <mat-option value="ropa">Ropa</mat-option>
+            <mat-option value="calzado">Calzado</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <div class="product-grid">
+    <app-product-card
+      *ngFor="let product of filteredProducts"
+      [product]="product"
+      (addToCart)="onAddToCart($event)"
+    ></app-product-card>
+  </div>
+  <p *ngIf="filteredProducts.length === 0" class="no-products-message">No se encontraron productos que coincidan con la búsqueda.</p>
+</div>
+<a href="/"   
+      class="background: linear-gradient(to right, white, darkgray) hover:from-amber-600 hover:to-orange-700 text-black font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+      Inicio
+</a>
+
+
+<!--
+<div class="product-list-container">
+  <mat-toolbar color="primary">
+    <span>Catálogo de Productos</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="cart-button" aria-label="Carrito de compras"
+            [matBadge]="cartItemCount" matBadgeColor="accent"
+            matBadgeOverlap="false" matBadgePosition="below after">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="product-grid">
+    <app-product-card
+      *ngFor="let product of products"
+      [product]="product"
+      (addToCart)="onAddToCart($event)"
+    ></app-product-card>
+  </div>
+  <p *ngIf="products.length === 0" class="no-products-message">No se encontraron productos.</p>
+</div>
+-->
+

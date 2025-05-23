@@ -1,0 +1,40 @@
+<p>product-detail</p>
+<div class="product-detail-container">
+  <mat-card *ngIf="product" class="product-detail-card">
+    <mat-card-header>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-subtitle>{{ product.category | titlecase }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="product.imageUrl" [alt]="product.name">
+    <mat-card-content>
+      <p class="detail-price">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</p>
+      <p class="detail-description">{{ product.description }}</p>
+      <h3>Detalles del Producto:</h3>
+      <ul>
+        <li>**ID:** {{ product.id }}</li>
+        <li>**Categoría:** {{ product.category | titlecase }}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions class="detail-actions">
+      <button mat-raised-button color="primary" (click)="onAddToCart()">
+        <mat-icon>add_shopping_cart</mat-icon> Añadir al Carrito
+      </button>
+      <button mat-flat-button color="accent" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Volver al Catálogo
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card *ngIf="!product" class="product-detail-card">
+    <mat-card-header>
+      <mat-card-title>Producto No Encontrado</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Lo sentimos, el producto que buscas no existe.</p>
+    </mat-card-content>
+    <mat-card-actions class="detail-actions">
+      <button mat-flat-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Volver al Catálogo
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

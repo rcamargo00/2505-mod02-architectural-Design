@@ -1,0 +1,13 @@
+<mat-list-item>
+  <mat-icon matListItemIcon (click)="onToggleComplete()">
+    {{ task.completed ? 'check_circle' : 'radio_button_unchecked' }}
+  </mat-icon>
+  <h3 matListItemTitle [class.completed]="task.completed" [routerLink]="['/tasks', task.id]">{{ task.title }}</h3>
+  <button mat-icon-button matListItemMeta (click)="onEditTask()">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button matListItemMeta color="warn" (click)="onDeleteTask()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-list-item>
+

@@ -1,0 +1,40 @@
+<div class="post-detail-container">
+  <mat-card *ngIf="post" class="post-detail-card">
+    <mat-card-header>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-subtitle>
+        Por {{ post.author }} el {{ post.date | date:'fullDate' }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p class="post-content">{{ post.content }}</p>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions class="detail-actions">
+      <button mat-flat-button color="accent" (click)="editPost()">
+        <mat-icon>edit</mat-icon> Editar
+      </button>
+      <button mat-flat-button color="warn" (click)="deletePost()">
+        <mat-icon>delete</mat-icon> Eliminar
+      </button>
+      <span class="spacer"></span>
+      <button mat-flat-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Volver al Blog
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card *ngIf="!post" class="post-detail-card">
+    <mat-card-header>
+      <mat-card-title>Publicación No Encontrada</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Lo sentimos, la publicación que buscas no existe.</p>
+    </mat-card-content>
+    <mat-card-actions class="detail-actions">
+      <button mat-flat-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Volver al Blog
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

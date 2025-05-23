@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-TF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiplomadoV2 - Proyectos Angular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .app-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100">
+
+    <header class="py-6 shadow-lg bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold">
+                <span class="gradient-text bg-gradient-to-r from-sky-400 to-blue-500">DiplomadoV2</span>
+                <span class="block text-2xl text-sky-300 mt-1">Proyectos Destacados en Angular</span>
+            </h1>
+            <p class="mt-3 text-lg text-slate-300">Explora las aplicaciones desarrolladas como parte del diplomado FullStack.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+            <div class="app-card bg-slate-800/70 rounded-xl shadow-2xl overflow-hidden border border-slate-700">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-12 w-12 text-teal-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                        <h2 class="text-2xl font-semibold text-teal-300">Gestor de Tareas</h2>
+                    </div>
+                    <p class="text-slate-400 mb-6">Organiza tu día a día. Agrega, edita, elimina y completa tus tareas de forma eficiente.</p>
+                    <a href="/tasks" 
+                       class="inline-block bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        Acceder a la App
+                    </a>
+                </div>
+            </div>
+
+            <div class="app-card bg-slate-800/70 rounded-xl shadow-2xl overflow-hidden border border-slate-700">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-12 w-12 text-pink-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <h2 class="text-2xl font-semibold text-pink-300">Catálogo de Productos</h2>
+                    </div>
+                    <p class="text-slate-400 mb-6">Descubre nuestra colección de ropa y calzado. Filtra, busca y añade tus favoritos al carrito.</p>
+                    <a href="/products" 
+                       class="inline-block bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        Ver Catálogo
+                    </a>
+                </div>
+            </div>
+
+            <div class="app-card bg-slate-800/70 rounded-xl shadow-2xl overflow-hidden border border-slate-700">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-12 w-12 text-amber-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0a8.485 8.485 0 0011.92 0M12 17.747A8.485 8.485 0 01.08 17.747M12 6.253A8.485 8.485 0 0123.92 6.253M12 6.253A8.485 8.485 0 00.08 6.253m11.92 0A8.485 8.485 0 0112 3.253a8.485 8.485 0 010 14.494A8.485 8.485 0 0112 3.253z" />
+                        </svg>
+                         <h2 class="text-2xl font-semibold text-amber-300">Blog Personal</h2>
+                    </div>
+                    <p class="text-slate-400 mb-6">Artículos y tutoriales sobre Angular y desarrollo web. Lee, comenta y aprende.</p>
+                    <a href="/blog" 
+                       class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        Ir al Blog
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-8 mt-12 border-t border-slate-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-slate-400">&copy; <span id="currentYear"></span> DiplomadoV2 - Un proyecto de Desarrollo FullStack. Todos los derechos reservados.</p>
+            <p class="text-sm text-slate-500 mt-1">Desarrollado con Angular y mucho <span class="text-red-500">&hearts;</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+<!--
+<div class="landing-container">
+  <mat-toolbar color="primary">
+    <span>Diplomado v2 - Proyectos Angular</span>
+  </mat-toolbar>
+
+  <div class="hero-section">
+    <h1>Bienvenido a tu Espacio de Desarrollo Angular</h1>
+    <p>Explora tres aplicaciones interactivas que demuestran el poder de Angular.</p>
+  </div>
+
+  <div class="app-cards-container">
+    <mat-card class="app-card" routerLink="/tasks">
+      <mat-card-header>
+        <mat-card-title>Gestor de Tareas</mat-card-title>
+        <mat-card-subtitle>Organiza tu día</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/task-manager-icon.png" alt="Gestor de Tareas">
+      <mat-card-content>
+        <p>Una aplicación robusta para gestionar tus tareas diarias: agregar, editar, eliminar y marcar como completadas.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button color="accent">Ir al Gestor</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="app-card" routerLink="/products">
+      <mat-card-header>
+        <mat-card-title>Catálogo de Productos</mat-card-title>
+        <mat-card-subtitle>Encuentra tu estilo</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/product-catalog-icon.png" alt="Catálogo de Productos">
+      <mat-card-content>
+        <p>Explora una colección de ropa y calzado. Añade productos al carrito y filtra por categoría o nombre.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button color="accent">Ver Catálogo</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="app-card" routerLink="/blog">
+      <mat-card-header>
+        <mat-card-title>Blog Personal (Angular)</mat-card-title>
+        <mat-card-subtitle>Comparte tus ideas</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/blog-icon.png" alt="Blog Personal">
+      <mat-card-content>
+        <p>Un espacio para compartir publicaciones sobre Angular. Agrega, edita y elimina tus propios artículos.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button color="accent">Leer Blog</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+-->

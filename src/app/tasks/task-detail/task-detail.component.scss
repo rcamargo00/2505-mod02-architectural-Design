@@ -1,0 +1,36 @@
+.task-detail-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #e8eaf6;
+  min-height: calc(100vh - 64px);
+}
+mat-card {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+mat-card-title {
+  font-size: 1.6em;
+  color: #3f51b5;
+}
+mat-card-content p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  strong {
+    margin-right: 5px;
+  }
+  mat-icon {
+    margin-left: 5px;
+    color: #4caf50; // Green for completed, could be red for incomplete
+  }
+}
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+

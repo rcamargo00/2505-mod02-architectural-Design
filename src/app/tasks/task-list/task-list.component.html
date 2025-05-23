@@ -1,0 +1,90 @@
+
+<div class="task-list-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Gestor de Tareas</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="taskForm" (ngSubmit)="addTask()" class="add-task-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nueva Tarea</mat-label>
+          <input matInput formControlName="title" placeholder="Ej. Comprar víveres">
+          <mat-error *ngIf="taskForm.controls['title'].hasError('required') && taskForm.controls['title'].touched">
+            El título de la tarea es obligatorio.
+          </mat-error>
+          <mat-error *ngIf="taskForm.controls['title'].hasError('minlength') && taskForm.controls['title'].touched">
+            El título debe tener al menos 3 caracteres.
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="taskForm.invalid">
+          <mat-icon>add</mat-icon> Añadir Tarea
+        </button>
+      </form>
+      <mat-divider></mat-divider>
+      <mat-list>
+        <app-task-item
+          *ngFor="let task of tasks"
+          [task]="task"
+          (toggleComplete)="toggleTaskCompletion($event)"
+          (editTask)="editTask($event)"
+          (deleteTask)="deleteTask($event)"
+        ></app-task-item>
+      </mat-list>
+      <p *ngIf="tasks.length === 0" class="no-tasks-message">No hay tareas. ¡Agrega una nueva!</p>
+    </mat-card-content>    
+  </mat-card>  
+</div>
+<a href="/"   
+      class="background: linear-gradient(to right, white, darkgray) hover:from-amber-600 hover:to-orange-700 text-black font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+      Inicio
+  </a>
+
+
+<!--
+<div class="task-list-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Gestor de Tareas</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let task of tasks">
+          <mat-icon matListItemIcon>{{ task.completed ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+          <h3 matListItemTitle [class.completed]="task.completed">{{ task.title }}</h3>
+          <p matListItemLine>ID: {{ task.id }}</p>
+          <button mat-icon-button matListItemMeta>
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button matListItemMeta>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+<div class="task-list-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Gestor de Tareas</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <app-task-item
+          *ngFor="let task of tasks"
+          [task]="task"
+          (toggleComplete)="toggleTaskCompletion($event)"
+          (editTask)="editTask($event)"
+          (deleteTask)="deleteTask($event)"
+        ></app-task-item>
+        <mat-divider *ngIf="tasks.length > 0"></mat-divider>
+      </mat-list>
+      <p *ngIf="tasks.length === 0" class="no-tasks-message">No hay tareas. ¡Agrega una nueva!</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+-->

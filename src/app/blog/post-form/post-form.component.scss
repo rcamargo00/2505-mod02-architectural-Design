@@ -1,0 +1,56 @@
+/* src/app/blog/post-form/post-form.component.scss */
+.post-form-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+.post-form-card {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  mat-card-header {
+    background-color: #e8eaf6;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  mat-card-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #3f51b5;
+  }
+  mat-card-content {
+    padding: 20px;
+  }
+  .blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    button {
+      padding: 0 25px;
+      height: 48px;
+    }
+  }
+  @media (max-width: 600px) {
+    .form-actions {
+      flex-direction: column;
+      align-items: stretch;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

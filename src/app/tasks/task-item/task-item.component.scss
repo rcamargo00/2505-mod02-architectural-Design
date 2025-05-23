@@ -1,0 +1,21 @@
+mat-list-item {
+  border-bottom: 1px solid #eee;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+mat-icon[matListItemIcon] {
+  cursor: pointer;
+  color: #673ab7; // Purple for status icons
+}
+h3 {
+  flex-grow: 1; // Allows title to take up available space
+  margin: 0 10px;
+}
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+button[mat-icon-button] mat-icon {
+  color: #757575; // Grey for action icons
+}

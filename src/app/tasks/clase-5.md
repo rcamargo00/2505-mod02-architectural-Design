@@ -480,6 +480,4 @@ Let's plan the Product Catalog application.
       }
     }
     ```
-    **Screenshot with current advance for Product Catalog:**
-    (At this point, you'd take a screenshot of your running application showing the product list with `ProductCardComponent` instances.)
-    *To achieve this, you need to add placeholder images (e.g., `camiseta-deportiva.jpg`, `zapatillas-running.jpg`, etc.) to your `src/assets/` folder.*
+    
